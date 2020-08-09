@@ -1,5 +1,6 @@
 package mx.com.<%= company %>.services;
 
+import mx.com.<%= company %>.services.facade.I<%= titleName %>Facade;
 import mx.com.<%= company %>.services.service.I<%= titleName %>Service;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,4 +24,6 @@ public abstract class BaseTest {
     @Autowired
     public I<%= titleName %>Service <%= lowerName %>Service;
 
+    @Autowired
+    public I<%= titleName %>Facade <%= lowerName %>Facade;
 }

@@ -1,5 +1,7 @@
 package mx.com.<%= company %>.web;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,12 +23,14 @@ import org.springframework.web.client.RestTemplate;
 @EntityScan("mx.com.<%= company %>.model")
 public class Application {
 
+    static final Logger LOG = LogManager.getLogger(Application.class);
+
     public static void main(String[] args) {
 
         ApplicationContext applicationContext = SpringApplication.run(Application.class);
 
         for (String name : applicationContext.getBeanDefinitionNames()) {
-            System.out.println(name);
+            LOG.info(name);
         }
     }
 

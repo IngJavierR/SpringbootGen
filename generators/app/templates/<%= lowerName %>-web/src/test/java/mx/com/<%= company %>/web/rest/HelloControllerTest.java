@@ -15,6 +15,7 @@ public class HelloControllerTest extends BaseTest {
 
         List<UserTO> users = this.<%= lowerName %>Facade.getAllUsers();
 
-        Assert.assertEquals(1, users.size());
+        Assert.assertNotNull(users);
+        Assert.assertEquals(2, users.size());
     }
 }
