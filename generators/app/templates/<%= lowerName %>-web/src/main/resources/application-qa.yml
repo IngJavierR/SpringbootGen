@@ -9,8 +9,7 @@ spring:
     show-sql: true
   application:
     name: <%= lowerName %>-service
-  profiles:
-    active: qa
+  profiles: qa
 
 server:
   port: <%= port %>
@@ -20,7 +19,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka-server-ip:8000/eureka
+      defaultZone: http://${APIMANAGER_SVC_SERVICE_HOST}:${APIMANAGER_SVC_PORT_8000_TCP_PORT}/eureka
   instance:
     leaseRenewalIntervalInSeconds: 5   
     preferIpAddress: true
