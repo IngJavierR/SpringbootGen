@@ -51,6 +51,9 @@ module.exports = class extends Generator {
                 port: this.props.port,
                 company: this.props.company,
                 jversion: this.props.jversion
+            },{
+                openDelimiter: '[',
+                closeDelimiter: ']'
             }
         );
         this.fs.copyTpl(
@@ -61,6 +64,9 @@ module.exports = class extends Generator {
                 port: this.props.port,
                 company: this.props.company,
                 jversion: this.props.jversion
+            },{
+                openDelimiter: '[',
+                closeDelimiter: ']'
             }
         );
         done();
