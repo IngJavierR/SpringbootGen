@@ -16,6 +16,9 @@ spring:
 server:
   port: [%= port %]
 
+KAFKA_BOOSTRAPADDRESS: localhost:9192
+GROUPID: order
+
 eureka:
   client:
     register-with-eureka: false
